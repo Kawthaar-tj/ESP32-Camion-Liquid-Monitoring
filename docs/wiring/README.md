@@ -20,3 +20,6 @@ The system features:
 - Designed for integration inside a truck workshop environment
 
 The architecture is modular and can be extended to additional tanks or cloud-based monitoring.
+## Hardware Wiring Diagram
+
+![Wiring Diagram](docs/wiring/wiring_diagram.png)
