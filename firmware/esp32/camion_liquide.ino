@@ -9,8 +9,8 @@ const int PIN_USE  = 34;
 const int PIN_NEUF = 35;
 
 // ---- WiFi / MQTT ----
-const char* SSID = "Sedimat";
-const char* PASS = "WelcomeSedimat38!!";
+const char* SSID = "---";
+const char* PASS = "---";
 
 const char* MQTT_HOST = "192.168.3.51";
 const int   MQTT_PORT = 1883;
@@ -127,3 +127,4 @@ void loop() {
     tMQTT = now;
   }
 }
+
