@@ -1,21 +1,8 @@
-## Data Transmission – MQTT
+## Data Transmission and Visualization
 
-The ESP32 transmits the measured tank levels using the MQTT protocol.
+The ESP32 transmits the measured tank levels using the MQTT protocol, a lightweight publish/subscribe communication method widely used in IoT systems due to its low bandwidth usage and reliability. In this architecture, the ESP32 acts as the publisher and sends measurement data to an MQTT broker using the topic `camion/donnees`. The transmitted payload is formatted as a JSON message containing the device identifier, timestamp, and the measured liquid levels for both tanks. Node-RED acts as the subscriber, receiving the MQTT messages, parsing the JSON payload, and splitting the data into two separate values corresponding to the used coolant tank and the new coolant tank. These values are then displayed in real time on a Node-RED dashboard using gauge widgets, allowing clear monitoring of the coolant levels in the system.
 
-MQTT is a lightweight publish/subscribe messaging protocol widely used in IoT
-systems due to its low bandwidth usage and simplicity.
-
-In this system:
-
-- The ESP32 acts as the **publisher**
-- The MQTT broker receives the data
-- Node-RED acts as the **subscriber** to process and visualize the data
-
-### MQTT Topic
-
-camion/donnees
-
-### MQTT Payload
+### Example MQTT Payload
 
 ```json
 {
@@ -24,19 +11,3 @@ camion/donnees
   "liquide_use": 3.12,
   "liquide_neuf": 12.43
 }
-## Data Processing and Visualization – Node-RED
-
-Node-RED is used to subscribe to the MQTT topic and visualize the liquid levels
-in real time.
-
-The flow performs the following operations:
-
-1. Subscribe to the MQTT topic `camion/donnees`
-2. Parse the JSON payload
-3. Split the data into two values:
-   - Used coolant tank
-   - New coolant tank
-4. Display both values using dashboard gauges
-### Node-RED Flow
-
-![Node-RED Flow](docs/nodered/node_red_flow.png)
