@@ -14,3 +14,13 @@ In this system:
 ### MQTT Topic
 
 camion/donnees
+
+### Example MQTT Payload
+
+```json
+{
+  "device_id": "camion_X",
+  "timestamp": "2026-03-04T14:30:00Z",
+  "liquide_use": 3.12,
+  "liquide_neuf": 12.43
+}
