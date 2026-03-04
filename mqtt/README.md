@@ -15,7 +15,7 @@ In this system:
 
 camion/donnees
 
-### Example MQTT Payload
+### MQTT Payload
 
 ```json
 {
