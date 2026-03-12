@@ -12,7 +12,7 @@ const int PIN_NEUF = 35;
 const char* SSID = "---";
 const char* PASS = "---";
 
-const char* MQTT_HOST = "192.168.3.51";
+const char* MQTT_HOST = "192.168.X.X";
 const int   MQTT_PORT = 1883;
 const char* TOPIC     = "camion/donnees";
 const char* DEV_ID    = "camion_X";
@@ -127,4 +127,5 @@ void loop() {
     tMQTT = now;
   }
 }
+
 
