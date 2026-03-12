@@ -5,7 +5,7 @@
 #define WIFI_PASS "CHANGE_ME"
 
 // ---- MQTT ----
-#define MQTT_HOST "192.168.X.XX"
+#define MQTT_HOST "192.168.X.X"
 #define MQTT_PORT 1883
 #define MQTT_TOPIC "camion/donnees"
 #define DEVICE_ID  "camion_X"
